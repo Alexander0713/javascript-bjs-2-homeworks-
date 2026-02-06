@@ -1,0 +1,18 @@
+# Игнорировать ВСЕ папки кроме 2.functions
+/0.debugger/
+/1.base-concepts/
+/3.arrays/
+/4.objects/
+/5.classes/
+/6.exception-closure/
+/7.async/
+/8.decorators/
+/Jasmine/
+/assets/
+/main
+
+# Служебные файлы
+.DS_Store
+*.log
+node_modules/
+Thumbs.db
