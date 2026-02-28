@@ -32,20 +32,16 @@ function debounceDecoratorNew(func, delay) {
   function wrapper(...args) {
     wrapper.allCount++;    
     
-    const isFirstCall = !timeoutId;
-    if (isFirstCall) {
+    if (!timeoutId) {
       func(...args);
       wrapper.count++;
     }    
     
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-    }    
+    clearTimeout(timeoutId);   
     
     timeoutId = setTimeout(() => {      
       func(...args);
-      wrapper.count++;
-      timeoutId = null; 
+      timeoutId = null;
     }, delay);
   }
   
